@@ -1,0 +1,270 @@
+
+// -----------------------------------
+// Variables for user customisation
+// -----------------------------------
+
+@body-background: #242424;
+@body-color: #242424;
+@header-color: #242424;
+@nav-border: #E7D7AD;
+@header-background: #282828;
+@TextColor: #E7D7AD;
+
+// -----------------------------------
+// Generic styles
+// -----------------------------------
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  //background-color: @body-background;
+  color: @TextColor;
+  background-image: url(https://raw.githubusercontent.com/oswps/theme/main/img/g_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  //background: @body-background;
+  color: @body-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+
+a {
+  color: @body-color;
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  text-align: right;
+  clear: both;
+}
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// -----------------------------------
+// Structure
+// -----------------------------------
+
+#container {
+  padding: 2em;
+}
+
+// -----------------------------------
+// Header
+// -----------------------------------
+
+header {
+  font-size: 1.8em;
+  margin-bottom: 1.1em;
+  width: 100%;
+  background-color: @header-background;
+  //background-image: url(https://wallpaperaccess.com/full/4341020.png);
+  //background-position-y: bottom;
+  padding: 15px;
+  border-style: solid;
+  border-radius: 50px;
+  border-color: @nav-border;
+  border-width: 3px;
+}
+header.a{
+  text-align: right;
+  float: right;
+}
+
+h1 {
+  display: inline-block;
+  font-weight: bold;
+}
+
+h1 a {
+  color: @TextColor;
+}
+
+// -----------------------------------
+// Footer
+// -----------------------------------
+
+footer {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 3em;
+}
+
+footer a {
+  color: #17baef;
+}
+
+// -----------------------------------
+// Breadcrumbs navigation
+// -----------------------------------
+
+nav.breadcrumbs {
+  border-bottom: 0px solid @nav-border;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  padding: 0em 0em 0.8em 0.1em;
+  color: @TextColor;
+}
+a.breadcrumb-item{
+  color: @TextColor;  
+}
+
+// -----------------------------------
+// Nested albums
+// -----------------------------------
+
+#albums, #media {
+  margin: 0em;
+}
+/*
+div#albums{
+  //text-align: center;
+  background-color: #616161;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: @nav-border;
+  border-width: 3px;
+}*/
+
+#albums a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  margin-right: 2em;
+  margin-bottom: 3em;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 220px;
+  background-size: cover;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: @nav-border;
+  border-width: 3px;
+}
+
+#albums .info {
+  position: absolute;
+  padding: 1em;
+  background: rgba(0,0,0,0.3);
+  color: @TextColor;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  margin: 0;
+  width: 100%;
+  font-weight: bold;
+  bottom: 0;
+}
+
+#albums h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+// -----------------------------------
+// Photo and video thumbnails
+// -----------------------------------
+
+#media li {
+  float: left;
+  margin-right: 0.4em;
+  margin-bottom: 0.2em;
+  position: relative;
+  cursor: zoom-in;
+}
+
+#media a {
+  display: inline-block;
+}
+
+#media img {
+  border-radius: 8px;
+  display: block;
+  border-style: solid;
+  border-color: @nav-border;
+  border-width: 3px;
+}
+
+#media li .video-overlay {
+  left: 50%;
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  position: absolute;
+  top: 50%;
+  width: 48px;
+}
+
+// -----------------------------------
+// Photo and video thumbnails
+// -----------------------------------
+
+@media only screen and (max-width: 360px) {
+  #albums a {
+    width: 100%;
+    height: 190px;
+  }
+}
+
+// -----------------------------------
+// Pagination navigation
+// -----------------------------------
+
+nav.pagination {
+  color: #666;
+  display: inline-block;
+  font-size: 1em;
+  margin-top: 2em;
+  padding: 0em 0em 0.5em 0em;
+}
+
+nav.pagination .page {
+  margin-right: 0.2em;
+}
+
+nav.pagination .page.current {
+  font-weight: bold;
+}
+
+nav.pagination a {
+  color: #666;
+}
+
+// -----------------------------------
+// Zip download
+// -----------------------------------
+
+#zip {
+  color: #666;
+  margin-bottom: 2em;
+}
+
+#zip a {
+  color: #3399ff;
+}
